@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { ProdutosRoutingModule } from './produtos-routing.module';
 import { SecoesComponent } from './secoes/secoes.component';
-
+import { AppMaterialModule } from '../shared/app-material/app-material.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +10,8 @@ import { SecoesComponent } from './secoes/secoes.component';
   ],
   imports: [
     CommonModule,
-    ProdutosRoutingModule
+    ProdutosRoutingModule,
+    AppMaterialModule
   ]
 })
 export class ProdutosModule { }

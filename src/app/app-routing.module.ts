@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SecoesComponent } from './produtos/secoes/secoes.component';
 
 const routes: Routes = [
-  {path: 'secoes', component: SecoesComponent}
+  { path: '', pathMatch: 'full', redirectTo: 'produtos' },
+  {
+    path: 'produtos',
+    loadChildren: () => import('./produtos/produtos.module').then(m => m.ProdutosModule)
+  }
 ];
 
 @NgModule({
