@@ -1,16 +1,44 @@
 <mat-toolbar class="color-bg">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
   <span><img src="assets/logo.png" alt="Logo Brechó Garagem" width="12%"></span>
   <span class="example-spacer"></span>
+
+  <div style="padding-right: 50px;" >
+    <button routerLink="" mat-button style="padding-right: 25px;">Quem somos</button>
+
+    <button mat-button class="menu-button"
+    [matMenuTriggerFor]="produtosMenu"
+    (mouseover)="toggleProdutosMenu()">Produtos</button>
+  </div>
+
+  <mat-menu #produtosMenu="matMenu">
+    <button [matMenuTriggerFor]="company" mat-menu-item>Versão</button>
+    <button [matMenuTriggerFor]="customer" mat-menu-item>Inverno</button>
+    <button [matMenuTriggerFor]="product" mat-menu-item>Infantil</button>
+  </mat-menu>
+  <div class="menu-content">
+
+  <mat-menu #company="matMenu">
+    <button mat-menu-item>Term</button>
+    <button mat-menu-item>Tax</button>
+    <button mat-menu-item>Currency</button>
+  </mat-menu>
+  <mat-menu #customer="matMenu">
+    <button mat-menu-item>Type</button>
+    <button mat-menu-item>Tax</button>
+  </mat-menu>
+  <mat-menu #product="matMenu">
+    <button mat-menu-item>Category</button>
+    <button mat-menu-item>Variant</button>
+    <button mat-menu-item>UOM</button>
+  </mat-menu>
+
+</div>
   <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
     <mat-icon>favorite</mat-icon>
   </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
+  <button (click)="badgevisibility()" mat-icon-button>
+    <mat-icon matBadgeColor="accent" matBadge="15" [matBadgeHidden]="badgevisible"
+      matBadgeSize="small">notifications</mat-icon>
   </button>
 </mat-toolbar>
 <router-outlet>
-
-

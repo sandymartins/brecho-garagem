@@ -9,6 +9,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ProdutosModule } from './produtos/produtos.module';
 import { HttpClientModule } from '@angular/common/http';
+import { TesteModule } from './teste/teste.module';
+import { AppMaterialModule } from './shared/app-material/app-material.module';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,11 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     MatButtonModule,
     ProdutosModule,
-    HttpClientModule
+    HttpClientModule,
+    TesteModule,
+    AppMaterialModule,
+    MatMenuModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
