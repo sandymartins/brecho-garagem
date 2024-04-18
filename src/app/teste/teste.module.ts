@@ -1,11 +1,8 @@
 import { NgModule } from '@angular/core';
+import { TesteComponent } from './teste.component';
 import { CommonModule } from '@angular/common';
-
-import { MatIconModule } from "@angular/material/icon";
 import { TesteRoutingModule } from './teste-routing.module';
-import { TesteComponent } from './teste/teste.component';
-import { MatBadgeModule } from "@angular/material/badge"
-import { AppMaterialModule } from '../shared/app-material/app-material.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -15,9 +12,7 @@ import { AppMaterialModule } from '../shared/app-material/app-material.module';
   imports: [
     CommonModule,
     TesteRoutingModule,
-    MatBadgeModule,
-    AppMaterialModule,
-    MatIconModule
+    SharedModule
   ],
   exports : [ TesteComponent ]
 })

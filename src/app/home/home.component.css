@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: center; /* alinha os filhos horizontalmente ao centro */
+  align-items: center; /* alinha os filhos verticalmente ao centro */
+}
+
+.text-home .bag {
+  flex: 1; /* faz as divs ocuparem a mesma largura */
+  width: 200px;
+  height: 100px;
+  margin: 0 10px; /* Espaçamento entre as divs */
+}
+
+.text-home {
+  font-family: revert-layer;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+}
+
+

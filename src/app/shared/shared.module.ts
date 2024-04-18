@@ -24,4 +24,4 @@ import { MatAutocompleteModule } from "@angular/material/autocomplete";
     MatListModule
   ]
 })
-export class AppMaterialModule { }
+export class SharedModule { }

@@ -1,17 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProdutosRoutingModule } from './produtos-routing.module';
-import { SecoesComponent } from './secoes/secoes.component';
+
+import { NavbarRoutingModule } from './navbar-routing.module';
+import { NavbarComponent } from './navbar.component';
 import { SharedModule } from '../shared/shared.module';
+
 
 @NgModule({
   declarations: [
-    SecoesComponent
+    NavbarComponent
   ],
   imports: [
     CommonModule,
-    ProdutosRoutingModule,
+    NavbarRoutingModule,
     SharedModule
+  ],
+  exports: [
+    NavbarComponent
   ]
 })
-export class ProdutosModule { }
+export class NavbarModule { }
