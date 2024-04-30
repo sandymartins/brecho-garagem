@@ -16,6 +16,25 @@
   font-weight: bold;
   font-style: italic;
   text-align: center;
+  width: 630px;
+}
+
+p {
+  font-family: system-ui;
+}
+
+/* Estilos para telas maiores ou iguais a 650 pixels de largura */
+@media only screen and (max-width: 650px) {
+  .container {
+    display: block;
+  }
+  p {
+    margin-left: 13px;
+  }
+  img {
+    margin-left: 150px;
+  }
+
 }
 
 

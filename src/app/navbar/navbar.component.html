@@ -1,16 +1,16 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <mat-toolbar class="color-bg">
-  <span><img src="assets/logo.png" alt="Logo Brechó Garagem" width="12%"></span>
+  <span><img src="assets/logo.png" alt="Logo Brechó Garagem" width="12%" style="min-width: 141px;"></span>
   <span class="example-spacer"></span>
 
   <ul>
-    <li><a href="../home/home.component.html">Home</a></li>
+    <li><a routerLink="/home">Home</a></li>
     <li>
       <a href="#">Produtos </a>
       <ul class="dropdown">
-        <li><a href="#">Verão</a></li>
-        <li><a href="#">Inverno</a></li>
-        <li><a href="#">Infantil</a></li>
+        <li *ngFor="let produto of produtos">
+          <a [routerLink]="produto.rota">{{ produto.nome }}</a>
+        </li>
       </ul>
     </li>
   </ul>

@@ -18,4 +18,12 @@ export class NavbarComponent {
   badgevisibility() {
     this.badgevisible = true;
   }
+
+  produtos = [
+    { nome: 'Verão', rota: '/verao' },
+    { nome: 'Inverno', rota: '/inverno' },
+    { nome: 'Infantil', rota: '/infantil' },
+    { nome: 'Produtos', rota: '/listaProdutos' }
+  ];
+
 }

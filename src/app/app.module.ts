@@ -10,6 +10,7 @@ import { TesteModule } from './teste/teste.module';
 import { ProdutosModule } from './produtos/produtos.module';
 import { NavbarModule } from './navbar/navbar.module';
 import { HomeModule } from './home/home.module';
+import { ListaProdutosModule } from './lista-produtos/lista-produtos.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HomeModule } from './home/home.module';
     ProdutosModule,
     TesteModule,
     NavbarModule,
-    HomeModule
+    HomeModule,
+    ListaProdutosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
